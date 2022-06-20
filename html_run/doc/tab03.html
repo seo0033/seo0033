@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab 03</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .tab {
+            padding: 100px 0;
+        }
+
+        .container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container>ul {
+            flex: 1;
+        }
+
+        .tab_menu {
+            /* display: flex; */
+        }
+
+        .tab_menu>li {
+            flex: 1;
+        }
+
+        .tab_menu>li>a {
+            display: block;
+            line-height: 40px;
+            padding: 0 15px;
+            background: #f9f9f9;
+        }
+
+        .tab_menu>li.on a {
+            background: #333;
+            color: #fff;
+        }
+
+        .tab_menu>li~li {
+            border-left: 1px solid #fff;
+        }
+
+        .tab_content {
+            position: relative;
+            background: url(../img/map.jpg)no-repeat center center/contain;
+            height: 500px;
+        }
+
+        .tab_content>li {
+            position: absolute;
+            display: none;
+
+        }
+
+        .tab_content>li.on {
+            display: block;
+            animation: arrow 2s;
+        }
+
+        .tab_content>li::before {
+            content: "\eb5d";
+            font-family: 'xeicon';
+            font-size: 30px;
+            color: #333;
+            text-shadow: 1px 1px 2px #333;
+        }
+
+        .tab_content>li:nth-child(1) {
+            inset: 30% auto auto 30%;
+        }
+
+        .tab_content>li:nth-child(2) {
+            inset: 60% auto auto 60%;
+        }
+
+        .tab_content>li:nth-child(3) {
+            inset: 50% auto auto 80%;
+        }
+
+        /* 위치 px로 설정하면 화면크기에따라 다르게 표시됨 -> %로 설정 */
+
+        @keyframes arrow {
+            to {
+                transform: rotateY(720deg);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="tab">
+        <div class="container">
+            <ul class="tab_menu">
+                <li class="on">
+                    <a href="">Seoul</a>
+                </li>
+                <li>
+                    <a href="">Busan</a>
+                </li>
+                <li>
+                    <a href="">Dokdo</a>
+                </li>
+            </ul>
+
+            <ul class="tab_content">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="bbong"></section>
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.tab_menu>li>a').on('click', function (e) {
+                e.preventDefault();
+                // console.log($(this).parent().index());
+                var idx = $(this).parent().index();
+                $('.tab_content>li').removeClass('on');
+                $('.tab_content>li').eq(idx).addClass('on');
+                $('.tab_menu>li').removeClass('on');
+                $(this).parent().addClass('on')
+
+            });
+
+            $('.product_slider').slick({
+                slidesToShow: 5,
+            })
+
+
+        })//the end
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- 
+const UL = document.querySelector('ul')
+const setUL = function () {
+console.log(UL);
+ff();
+ };
+UL.addEventListener('click', setUL);
+LI.addEventListener('click', setUL); 
+-->

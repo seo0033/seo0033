@@ -1,0 +1,83 @@
+h1 {
+    color: aliceblue;
+    line-height: 100px;
+    background: rebeccapurple;
+    padding: 0 10px;
+}
+
+nav {
+    line-height: 100PX;
+    background: rgba(153, 51, 105, 0.679);
+    padding: 0 10px;
+}
+
+div{
+    text-align: center;
+    margin: 5px 5px;
+}
+
+.right {
+    line-height: 100px;
+    background: rgb(193, 222, 98);
+    padding: 0 10px;
+}
+
+.header01 {
+    display: flex;
+    /* 가로배열 */
+}
+
+.header02 {
+    display: flex;
+    justify-content: center;
+    /* element 중앙배치 */
+}
+
+.header03 {
+    display: flex;
+    justify-content: space-between;
+    /* element 양쪽배치 */
+
+}
+
+.header04 {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.header05 {
+    display: flex;
+}
+
+.header05 nav {
+    margin: 0 0 0 auto;
+    /* nav(MENU)왼쪽마진최대로주기 */
+}
+
+.basic {
+    line-height: 100px;
+}
+
+.basic .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.basic nav {
+    margin: 0 0 0 auto;
+}
+
+.basic nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.basic .icon {
+    margin: 0 0 0 30px;
+}
+
+.basic li{
+    padding: 0 10px;
+}

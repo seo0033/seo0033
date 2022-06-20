@@ -1,0 +1,71 @@
+/* basic01 */
+.basic01 {
+    padding: 100px 0;
+    background: #dc70a477;
+    text-align: center;
+    /* 텍스트를 중앙에 배치 */
+}
+
+.basic01 h2 {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+
+}
+
+.basic01 p {
+    font-size: 15px;
+    margin: 0 0 30px 0;
+}
+
+.basic01 .container {
+    display: flex;
+    /* 이미지 가로 배열 */
+    gap: 30px; 
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.basic01 .container img {
+    width: 100%;
+}
+
+.basic01 figure {
+    flex: 1;
+}
+
+/* basic02 */
+.basic02 {
+    padding: 100px 0;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.basic02 h1 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+}
+
+.basic02 p {
+    font-style: italic;
+    font-size: 20px;
+    margin: 0 0 40px 0;
+}
+
+.basic02 .container {
+    display: flex;
+    gap: 10px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.basic02 .container img {
+    width: 100%;
+    /* width:100%(마진,패딩,보더 포함/스크롤바생길수있음),width:100%(마진,패딩,보더 포함x/스크롤바x)  */
+}
+
+.basic02 figure {
+    flex: 1;
+}

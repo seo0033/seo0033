@@ -1,0 +1,36 @@
+.content {
+    padding: 100px 0;
+}
+
+.content .container {
+    display: flex;
+    gap: 30px;
+    /* gap: 익스플로어에서 호환X → 네이버웨일설치 */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* display>position>font>tranform */
+
+.content .container figure {
+    flex: 1;
+}
+
+.content img {
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.content strong {
+    display: block;
+    /* strong은 inline → margin,padding안먹음 */
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.content p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.25;
+}

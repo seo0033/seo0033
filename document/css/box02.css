@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    /*  */
+}
+
+.box {
+    margin: 30px auto;
+    width: 600px;
+    border: 1px solid #333;
+}
+
+.box01 {
+    margin: 40px auto;
+    background: #ff0;
+}
+
+.box02 {
+    padding: 30px;
+    background: #f00;
+}
+
+.box03 {
+    display: block;
+    /* inline strong tag를 box로 바꿈 */
+    margin: 100px auto;
+    padding: 100px 30px;
+}
+
+.in {
+    width: 500px;
+    border: 5px solid #333;
+}
+
+.box04 {
+    background: #ff3;
+    margin: 0 auto;
+
+}
+
+.box05 {
+    background: #f03;
+    margin: 10px auto;
+    padding: 30px 30px;
+
+
+}
+
+.box06 {
+    margin: 30px auto;
+
+}

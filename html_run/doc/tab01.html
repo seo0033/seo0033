@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab 01</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .tab {
+            padding: 100px 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab_menu {
+            display: flex;
+        }
+
+        .tab_menu>li {
+            flex: 1;
+        }
+
+        .tab_menu>li>a {
+            display: block;
+            line-height: 40px;
+            padding: 0 15px;
+            background: #f9f9f9;
+        }
+
+        .tab_menu>li.on a {
+            background: #333;
+            color: #fff;
+        }
+
+        .tab_menu>li~li {
+            border-left: 1px solid #fff;
+        }
+
+        .tab_content>li {
+            display: none;
+            padding: 10px;
+        }
+
+        .tab_content>li.on {
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="tab">
+        <div class="container">
+            <ul class="tab_menu">
+                <li class="on"><a href="">Menu01</a></li>
+                <li><a href="">Menu02</a></li>
+                <li><a href="">Menu03</a></li>
+            </ul>
+            <!-- css에서 a에 on이 붙었다고 해도 html에서는 순번이 있는 li에 on붙여야함 -->
+
+            <ul class="tab_content">
+                <li class="on">01. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, veniam.</li>
+                <!--  슬라이드 넣고 display:none > block 하면 망가짐-->
+                <li>02. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, veniam.</li>
+                <li>03. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, veniam.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('.tab_menu>li>a').on('click', function (e) {
+                e.preventDefault();
+                // console.log($(this).parent().index());
+                var idx = $(this).parent().index();
+                $('.tab_content>li').removeClass('on');
+                $('.tab_content>li').eq(idx).addClass('on');
+                $('.tab_menu>li').removeClass('on');
+                $(this).parent().addClass('on')
+
+            })
+
+
+        })//the end
+    </script>
+
+
+</body>
+
+</html>
+
+<!-- 
+const UL = document.querySelector('ul')
+const setUL = function () {
+console.log(UL);
+ff();
+ };
+UL.addEventListener('click', setUL);
+LI.addEventListener('click', setUL); 
+-->

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* font사이즈 :300,700 가장많이사용 */
+#event {
+    padding: 100px 0;
+    text-align: center;
+    /* 박스 안에 글 중앙에 위치 */
+}
+
+#event i {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    /* 원으로 만들기 */
+}
+
+#event h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+#event h2::before {
+    content: "";
+    display: inline-block;
+    /* display: block; 박스로 만든다 */
+    width: 100px;
+    height: 1px;
+    background: #333;
+    margin: 0 10px;
+    vertical-align: middle;
+    /* 중앙에 위치 */
+}
+
+#event h2::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background: #333;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+/* 가상공간만듦(인식X,드래그X),글자사이에 공간넣을때 등등 자주사용✨
+::after :뒤에 
+::before :앞에*/
+
+#event p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+    /* 문장사이에 간격 */
+}
+
+#event .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    /* gap :30px(기본값) */
+}
+
+#event img {
+    max-width: 100%;
+    transition: 0.5s;
+    /* width :상속받는값,부모(1200px)기준 */
+}
+
+#event figure {
+    position: relative;
+    /* figure을 기준으로만듦 */
+    flex: 1;
+    overflow: hidden;
+    /* 이미지사이즈안에서 확대(넘치는거 없앰) */
+}
+
+/*다른사이즈 이미지 같은 공간차지하게
+❓flex:1; 검색해보기(1분코딩) */
+
+#event .container figure:hover img {
+    transform: scale(2);
+}
+
+/* ✨hover :마우스올렸을때 변하게 함 */
+/* scale(배수) */
+/* figure :개체 하나씩 적용 */
+/* tranform :정해진사이즈안에서 적용 */
+
+#event figure a {
+    position: absolute;
+    top: -40px;
+    /* -40px →figure이 overflow되어있어서 없어짐 */
+    left: 0;
+    padding: 10px 30px;
+    background: #333;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#event figure:hover a {
+    top: 0;
+}
+
+#practice {
+    padding: 100px 0;
+    text-align: center;
+}
+
+#practice h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+#practice p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+}
+
+#practice .container01 {
+    display: flex;
+    width: 1200px;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+#practice figure {
+    position: relative;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+#practice .container01 :hover img {
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+
+#practice figure a {
+    position: absolute;
+    padding: 10px 30px;
+    left: 0;
+    top: -50px;
+    background: rgb(86, 61, 145);
+    color: #fff;
+    transition: 0.5s;
+}
+
+#practice figure:hover a {
+    top: 0;
+}
+
+
+#practice i {
+    left: auto;
+    background: #020;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#practice .icon::before {
+    content: "";
+    display: inline-block;
+    width: 300px;
+    height: 1px;
+    background: #333;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#practice .icon::after {
+    content: "";
+    display: inline-block;
+    width: 300px;
+    height: 1px;
+    background: #333;
+    margin: 0 10px;
+    vertical-align: middle;
+}

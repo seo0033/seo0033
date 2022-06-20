@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            line-height: 100vh;
+        }
+
+        header {
+            background: #f00;
+            font-size: 50px;
+        }
+
+        main {
+            background: rgb(255, 0, 179);
+            font-size: 50px;
+        }
+
+        footer {
+            background: #00f;
+            font-size: 50px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container figure {
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .container figure:nth-child(2) {
+            background: #333;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky">
+        header
+    </header>
+    <main class="sticky">
+
+     </main>   
+        <section class="sticky">
+            <div class="container">
+                <figure>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam ea maiores eius iste quae modi
+                    inventore
+                    rem, ab aliquid fugit possimus consequuntur illo autem fuga voluptas cum necessitatibus.
+                    Exercitationem
+                    id ab enim, quae dignissimos explicabo rem voluptatibus non, error recusandae perferendis
+                    reprehenderit
+                    quisquam culpa architecto illum deleniti eligendi accusantium commodi nobis voluptatem eius? Aut
+                    enim
+                    magnam iusto quia temporibus perferendis mollitia saepe soluta totam ab facere eveniet, officia
+                    ipsum
+                    suscipit ratione culpa id vero! Cupiditate, accusantium. Unde ab officia iste, cumque magnam minima!
+                    Qui
+                    distinctio delectus quasi nemo, pariatur, impedit, quae et harum atque quisquam quos amet
+                    necessitatibus
+                    sunt velit mollitia ea odio eum. Eos perspiciatis, quod est in ipsum voluptates non sint laudantium
+                    optio minima dolores eum, atque et molestiae, mollitia obcaecati nam velit distinctio totam deleniti
+                    facere fugit error. Esse ut nesciunt ducimus magni nulla? Delectus accusantium, ut vitae aspernatur
+                    modi
+                    harum architecto earum tempore alias reprehenderit aut voluptas officia quod maiores ea eos iusto
+                    quidem
+                    repellendus fugiat ab labore mollitia! Explicabo dolorem doloremque officiis? Deserunt repudiandae
+                    illo
+                    ad vitae? Dicta natus atque laudantium. Nihil atque repudiandae, blanditiis soluta impedit quos quae
+                    possimus, ducimus magnam pariatur mollitia adipisci laudantium dicta unde natus et in, quod iste
+                    vitae
+                    a.
+                </figure>
+                <figure>
+
+                </figure>
+            </div>
+        </section>
+    
+    <footer class="sticky">
+        footer
+    </footer>
+
+</body>
+
+</html>

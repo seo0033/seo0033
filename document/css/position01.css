@@ -1,0 +1,40 @@
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* body기준 50%,꼭지점기준으로 이동 */
+    transform: translate(-50%, -50%);
+    /* 꼭지점x, 자기자신 기준50% 
+    transform 뒤에오는게 앞에꺼 먹음>2개사용X (x축,y축)으로 사용*/
+
+    /*★ 화면중앙에 팝업창 배치공식 ★
+    position :absolute;
+    top:50%; left:50%;
+    transform::translate(-50%,-50%); */
+    width: 450px;
+    height: 350px;
+    background: rgb(204, 178, 228);
+}
+
+.popup button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.popup0 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-80%, -80%);
+    bottom: 10px;
+    width: 300px;
+    height: 100px;
+    background: black;
+}
+
+.popup0 button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

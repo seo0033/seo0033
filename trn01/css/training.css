@@ -1,0 +1,45 @@
+.head h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 50px 0 20px 0;
+}
+
+.head p{
+    font-size: 15x;
+    text-align: center;
+}
+
+.content {
+    padding: 100px 0;
+}
+
+.content .container {
+    display: flex;
+    width: 1200px;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.content .container figure {
+    flex: 1;
+}
+
+.container img{
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+.content strong{
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.content p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.25;
+}
+.content em{
+    font-size: 10px;
+}

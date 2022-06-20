@@ -1,0 +1,341 @@
+:root {
+    --mc: #dc3545;
+    --gc: #dddddd;
+    --wc: #f8f9fa;
+    --dc: #000;
+}
+
+/* 색지정해두고 쓰는방법(익스플로어 호환X) */
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: 0.8rem;
+}
+
+/* rem : html font-size(↑20px)의 배수 */
+
+.wrap {}
+
+.top_banner {
+    border-top: 2px solid var(--mc);
+    border-bottom: 1px solid var(--gc);
+    font-size: 0.65rem;
+    line-height: 1.5rem;
+}
+
+/* #dddddd > #ddd */
+
+.top_banner .container {
+    display: flex;
+    justify-content: flex-end;
+    width: 60rem;
+    margin: 0 auto;
+}
+
+.top_banner li {
+    border-right: 1px solid var(--gc);
+    padding: 0 0.5rem;
+}
+
+/* <a></a>영역:최대한 크게잡기 */
+
+.header {
+    line-height: 5rem;
+}
+
+.header .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header h1 img {
+    width: 300px;
+}
+
+.header nav {
+    margin: 0 0 0 auto;
+}
+
+.header nav>ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header nav>ul a {
+    display: block;
+    font-size: 0.85rem;
+}
+
+/* block(box)적용되서 line-height적용 */
+
+.header nav>ul>li {
+    position: relative;
+}
+
+.header nav>ul>li~li::before {
+    /* li~li 맨앞 라인 없애기 */
+    content: "";
+    position: absolute;
+    inset: 50% auto auto -1rem;
+    width: 1px;
+    height: 0.6rem;
+    background: var(--gc);
+    transform: translateY(-50%)
+}
+
+.header i {
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    background: var(--gc);
+    border-radius: 3px;
+    margin: 0 0 0 1rem;
+    vertical-align: middle;
+}
+
+/* icon : font-weight 금지 */
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/pt-bg01.png)
+}
+
+.main_visual .main_slider img {
+    width: 100%;
+}
+
+.main_visual .slogan {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    text-align: right;
+    color: var(--wc);
+    text-shadow: 0 0 2px var(--dc);
+    z-index: 999;
+}
+
+.main_visual .slogan h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+}
+
+.main_visual .slogan h2::after {
+    display: block;
+    content: "";
+    width: 4rem;
+    height: 2px;
+    background: var(--wc);
+    margin: 1rem 5px 0 auto;
+}
+
+.main_visual .slogan p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.main_visual figure {
+    height: 30rem;
+}
+
+.main_visual .item01 {
+    background: url(../img/main_bg01.jpg) no-repeat center center/auto 100%;
+}
+
+.main_visual .item01.on {
+    background: url(../img/main_bg01.jpg) no-repeat center center/auto 120%;
+    transition: 2s;
+}
+
+.main_visual .item02 {
+    background: url(../img/main_bg02.jpg) no-repeat center center/auto 100%;
+}
+
+.main_visual .item02.on {
+    background: url(../img/main_bg02.jpg) no-repeat center center/auto 120%;
+    transition: 2s;
+}
+
+.main_visual .item03 {
+    background: url(../img/main_bg03.jpg) no-repeat center center/auto 100%;
+}
+
+.main_visual .item03.on {
+    background: url(../img/main_bg03.jpg) no-repeat center center/auto 120%;
+    transition: 2s;
+}
+
+.content {
+    padding: 100px 0;
+}
+
+.content .container {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.content figure {
+    flex: 1;
+}
+
+.box {
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+
+/* hover했을때 넘치면 박스만들어서 안에 넣기 */
+
+.content figure img {
+    transition: 0.5s;
+}
+
+.content figure:hover img {
+    transform: scale(1.5);
+}
+
+.content strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 0 17px 0;
+}
+
+.content p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.product {
+    padding: 30px 0;
+    border-top: 1px solid var(--gc);
+}
+
+.product .container {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.product .container .left {
+    flex: 2;
+}
+
+.product .container .right {
+    flex: 1;
+    line-height: 1.4;
+    border-left: 1px solid var(--gc);
+    padding: 15px 0 0 30px;
+}
+
+.product .container .left ul {
+    display: flex;
+    gap: 10px;
+}
+
+.product .tel {
+    border-bottom: 1px solid var(--mc);
+    margin: 0 0 15px 0;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.customer {
+    display: flex;
+}
+
+.customer>div {
+    flex: 1;
+}
+
+.customer .left {
+    text-align: right;
+    background: url(../img/main_banner01.jpg) no-repeat center center/cover;
+}
+
+.customer .right {
+    background: url(../img/main_banner02.jpg) no-repeat center center/cover;
+    border-left: 1px solid var(--gc)
+}
+
+/* 💥순서암기/아이폰 호환X
+background: contain →이미지자체를 다 보여줌
+            cover →이미지를 박스에 꽉채움*/
+
+.customer>div a {
+    display: block;
+    color: #fff;
+    padding: 50px 40px;
+    text-shadow: 0 0 3px var(--dc);
+    background: url(../img/pt-bg04.png)
+        /* 이미지화질 안좋을때 배경에 깔아주는방법 */
+}
+
+.customer>div a h3 {
+    font-size: 31px;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+
+.customer>div a p {
+    font-size: 13px;
+    font-weight: 300;
+    text-transform: uppercase;
+    /* 텍스트 안바꾸고 대문자로 바꾸는 방법 */
+}
+
+.footer {
+    padding: 30px 0 50px 0;
+    font-size: 13px;
+}
+
+.footer .container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .logo {
+    flex: 1;
+}
+
+.footer address {
+    flex: 4;
+    font-style: normal;
+    padding: 15px 0 0 0;
+}
+
+.footer address ul {
+    margin: 0 0 5px 0;
+}
+
+.footer address ul li {
+    display: inline-block;
+}
+
+.footer address ul li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: var(--gc);
+    margin: 0 10px;
+}

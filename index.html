@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BASIC</title>
+</head>
+
+<body>
+    <h1>HTML BASIC</h1>
+    <hr />
+    <h2>🔎Box-model : 기본박스</h2>
+    <ul>
+        <li>
+            <a href="./doc/box01.html">기본 박스 01</a>
+            <p>기본적인 박스의 성질에 대한 이해 width height padding margin</p>
+            <pre>
+                ◼ 축약형 방향(margin, padding, inset) 
+                상 / 우 / 하 / 좌 (4)
+                상 / 좌우 / 하 (3)
+                상하 / 좌우 (2)
+
+                ◼ box-sizing: border-box; → block의 안쪽으로 padding과 border를 가둔다.(for layout)
+            </pre>
+
+        </li>
+        <li>
+            <a href="./doc/box02.html">기본 박스 02</a>
+            <p>선택자에 대한 이해 </p>
+            <pre>
+                ◼ 선택자 종류
+                .class 
+                #id : 고유값
+                > : 자식선택자 
+                ~ : 형제선택자 
+                + : 인접형제/바로뒤 
+                ="" : attribute선택자
+                A,B : A와B 
+
+                ◼ 계급순서 : important > id > class
+
+                ◼ outline: 1px solid #ff0000; → 자리차지X layout관여X
+
+                ◼ section ul,div → section의 ul,모든 div (📛주의:section의 div X)
+            </pre>
+        </li>
+    </ul>
+    <h2>🔎Multi-menu : 다단메뉴</h2>
+    <ul>
+        <li>
+            <a href="./doc/test01.html">다단 메뉴 test</a>
+            <p>다단메뉴(전체)</p>
+        </li>
+
+        <li>
+            <a href="./doc/multi_menu01.html">다단 메뉴 01</a>
+            <p>다단메뉴(개별) position, display, hover, before</p>
+            <pre>
+                ◼ inset: 0 auto auto 0= top: 0; left: 0;(inset 익스플로어 호환X)
+                ◼  before/after : *(all)설정 안먹음 → 따로 설정해야함.
+            </pre>
+        </li>
+
+        <li>
+            <a href="./doc/multi_menu02.html">다단 메뉴 02</a>
+            <p>다단메뉴(개별) position, display, hover, before, opacity, visibility</p>
+            <pre>
+                ◼  display:none → 아예 없애기 
+                ◼  opacity → 자리차지O 투명하게
+                ◼ visibilty → 자리차지X 안보이게
+            </pre>
+
+        </li>
+    </ul>
+    <h2>🔎Position</h2>
+    <ul>
+        <li>
+            <a href="./doc/position01.html">position 01</a>
+            <p>position : relative, absolute, fixed, sticky / z-index</p>
+            <pre>
+                ◼ position: relative; : 좌표를 가지는 position상태 
+                                        position의 floting이나 width의 변화 X
+                ◼ position: absolute; : 뜬다. 쪼그라든다. 기준점 X → body를 기준으로 포개진다. 
+                                        block의 속성
+                                        부모요소의 position: relative, absolute, fixed 로 기준을 만들어 줄 수 있다.
+                ◼ position: fixed; : 기준 X (viewport 기준) 스크롤바 생성 X 
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/position02.html">position 02</a>
+            <p>position : sticky</p>
+        </li>
+        <li>
+            <a href="./doc/position03.html">position 03(total)</a>
+            <p>position : sticky, fixed (MANGO)</p>
+        </li>
+    </ul>
+
+    <h2>🔎Hover</h2>
+    <ul>
+        <li>
+            <a href="./doc/hover01.html">hover 01</a>
+            <p>hover, ::before, ::after </p>
+            <pre>
+                ◼ 중앙부터 bar 늘어나게 하는 방법
+                1) 박스 자체를 중앙에 배치 : margin: 0 auto;
+                2) position: absolute; > left: 50%; , transform: translateX(-50%);
+
+                ◼ ::before,::after border overflow선 없애기 → box-sizing: border-box;
+            </pre>
+        </li>
+    </ul>
+
+    <h2>🚩psd to html 01</h2>
+    <ul>
+        <li>
+            <a href="./doc/psdtohtml01.html">psdtohtml 01</a>
+        </li>
+    </ul>
+
+
+    <h2>🔎::before ::after : 가상요소 선택자</h2>
+    <ul>
+        <li>
+            <a href="./doc/pseudo_element01.html">pseudo_element 01</a>
+            <p>::before, ::after</p>
+            <pre>
+        ◼  :nth-child(even): 짝수
+           :nth-child(odd): 홀수
+
+        ◼ css에서 xeicon 넣는 방법
+        content: "\e907"; (검사에서 확인)
+        font-family: xeicon
+
+        ◼ attr(data-num)
+    </pre>
+        </li>
+    </ul>
+
+    <h2>🚩psd to html 02</h2>
+    <ul>
+        <li>
+            <a href="./doc/psdtohtml02.html">psdtohtml 02</a>
+        </li>
+    </ul>
+
+
+    <h2>🔹header 시안</h2>
+    <ul>
+        <li>
+            <a href="./doc/header01.html">header 01</a>
+            <p>LOGO + nav</p>
+        </li>
+        <li>
+            <a href="./doc/header02.html">header 02</a>
+            <p>LOGO + nav + icon</p>
+        </li>
+        <li>
+            <a href="./doc/header03.html">header 03</a>
+            <p>LOGO + nav(중앙위치) + icon</p>
+            <pre>
+                .container(logo + nav + i) → justify-content: space-between;
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/header04.html">header 04</a>
+            <p>LOGO + nav(양쪽margin같게) + icon</p>
+            <pre>
+                nav → margin: 0 auto;
+            </pre>
+        </li>
+        <li>
+            <a href="./doc/header05.html">header 05</a>
+            <p>LOGO(중앙) + nav(양사이드)</p>
+        </li>
+    </ul>
+
+</body>
+
+</html>
