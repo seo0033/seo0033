@@ -69,3 +69,7 @@
 #header a {
     display: inline-block;
 }
+
+.mainVisual .mainSlider .itm01 {
+    background: url(../img/mainvisual01.jpg)no-repeat center center/cover;
+}

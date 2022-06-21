@@ -14,8 +14,11 @@
 /* 20220620 seo0 topBanner */
 
 .topBanner {
+    position: sticky;
+    inset: 0 auto auto 0;
     padding: 30px 0;
     background: #f1f1f1;
+    z-index: 999;
 }
 
 .topBanner .inner {
@@ -244,4 +247,239 @@
 
 .mainArrow i:nth-child(2) {
     margin: 0 0 0 700px;
+}
+
+/*
+h2 p 사이 margin(O) padding(X) 
+section 위아래 공간 padding 
+*/
+
+/* 📝css작성순서
+ position(+z-index) 
+ display
+ margin/padding
+ font 
+*/
+
+.mainContent {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mainContent h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+/* 
+em : font사이즈의 배수
+ex) 19px * -0.025 
+*/
+.mainContent p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent .container {
+    gap: 30px;
+}
+
+/* 선택자 > 가장 바깥쪽 박스는 써주기,너무길게X (3~4개) */
+
+.mainContent .container figure {
+    flex: 1;
+}
+
+.mainContent .container img {
+    margin: 0 0 10px 0;
+}
+
+.mainContent .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent .container a {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 15px;
+    color: #fff;
+    background: #333;
+}
+
+/* mainContent2 */
+
+.mainContent2 {
+    padding: 100px 0;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.mainContent2 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent2 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent2 .container {
+    gap: 30px;
+}
+
+.mainContent2 .container figure {
+    flex: 1;
+}
+
+.mainContent2 .container img {
+    margin: 0 0 10px 0;
+}
+
+.mainContent2 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent2 .container a {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 15px;
+    color: #fff;
+    background: #333;
+}
+
+/* mainContent3 */
+
+.mainContent3 {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.mainContent3 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.mainContent3 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.mainContent3 .container {
+    gap: 30px;
+}
+
+.mainContent3 .container figure {
+    flex: 1;
+}
+
+.mainContent3 .container strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+}
+
+.mainContent3 .container a {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 15px;
+    color: #fff;
+    background: #333;
+}
+
+.mainContent3 figure .box {
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    transition: border-radius 0.5s 0.5s;
+}
+
+.mainContent3 figure:hover .box {
+    border-radius: 50%;
+}
+
+/* transform-origin: center 효과 서치 */
+
+.mainContent3 figure img {
+    transition: 0.5s;
+}
+
+.mainContent3 .container figure:hover img {
+    transform: scale(1.2);
+}
+
+/* fixedBg */
+
+.fixedBg {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual03.jpg)no-repeat fixed center center/cover;
+    /* background : fixed 배경고정 */
+    filter: grayscale(1);
+}
+
+.fixedBg h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.fixedBg p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.fixedBg i {
+    padding: 5px;
+    background: #333;
+    vertical-align: -10%;
+    border-radius: 50%;
+    margin: 0 0 0 15px;
+}
+
+/* fixedBg2 : 배경fixed 겹치기 */
+
+.fixedBg2 {
+    margin: 0 0 100vh 0;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual03.jpg)no-repeat fixed center center/cover;
+    /* background : fixed 배경고정 */
+}
+
+.fixedBg2 h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.fixedBg2 p {
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+}
+
+.fixedBg2 i {
+    padding: 5px;
+    background: #333;
+    vertical-align: -10%;
+    border-radius: 50%;
+    margin: 0 0 0 15px;
 }
