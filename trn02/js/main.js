@@ -29,4 +29,21 @@ $(function () {
     $('.mainArrow i:nth-child(2)').on('click', function () {
         $('.mainSlider').slick('slickNext')
     })
+
+    $('#utb').YTPlayer({
+        videoURL: 'https://youtu.be/Wc4ZIVBMvQ8',
+        containment: '.utb',
+        autoPlay: true,
+        mute: true,
+        startAt: 0,
+        opacity: 1,
+        showControls: false,
+
+    });
+
+    $('.utb .zoom').on('click', function (e) {
+        e.preventDefault();
+        // event 전파되는거 방지
+        $('#utb').YTPFullscreen();
+    })
 })//the end
