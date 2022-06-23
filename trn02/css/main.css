@@ -700,7 +700,10 @@ ex) 19px * -0.025
     overflow: hidden;
 }
 
-.serviceTab .right_content {
+.serviceTab .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -709,10 +712,7 @@ ex) 19px * -0.025
 }
 
 .serviceTab .right_content li.on {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 300px;
+    display: block;
 }
 
 .serviceTab .right_content li h2 {
