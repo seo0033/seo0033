@@ -564,23 +564,24 @@ ex) 19px * -0.025
 }
 
 .product .productSlider figure {
-    padding: 0 15px;
+    padding: 40px 20px 0 15px;
     font-size: 13px;
 
 }
 
 .product .productSlider figure.slick-center img {
-    transform: scale(1.5);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    transform: scale(1.3);
     transition: transform 0.5s;
 }
 
 .product .productSlider .inbox {
     margin: 0 0 10px 0;
-    overflow: hidden;
 }
 
 .product .productSlider strong {
     position: relative;
+    top: -10px;
     display: block;
     margin: 0 0 10px 0;
 }
@@ -590,10 +591,11 @@ ex) 19px * -0.025
     padding: 5px 15px;
     background: #333;
     color: #fff;
+    margin: 0 0 10px 0;
 }
 
 .product .productSlider .slick-dots {
-    padding: 20px 0;
+    padding: 20px 0 0 0;
 }
 
 .product .productSlider .slick-dots li {
@@ -622,7 +624,7 @@ ex) 19px * -0.025
 
 .product .productArrows i {
     position: absolute;
-    inset: 50% auto auto 50%;
+    inset: 55% auto auto 50%;
     transform: translate(-50%, -50%);
     font-size: 40px;
     background: rgba(0, 0, 0, 0.5);
@@ -661,7 +663,7 @@ ex) 19px * -0.025
 
 .serviceTab .tab_menu {
     display: flex;
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
 }
 
 .serviceTab .tab_menu li {
@@ -671,18 +673,19 @@ ex) 19px * -0.025
 }
 
 .serviceTab .tab_menu li~li {
-    border-left: 1px solid #fff;
+    border-left: 3px solid #fff;
 }
 
 
 .serviceTab .tab_menu li.on {
-    background: #f00;
+    background: #333;
     color: #fff;
 }
 
 .serviceTab .tab_menu li a {
     display: block;
     padding: 10px 15px;
+    text-align: center;
 }
 
 .tab_content .notice a {
@@ -749,4 +752,55 @@ ex) 19px * -0.025
     border-radius: 5px;
     cursor: pointer;
     z-index: 999;
+}
+
+#footer{
+    background: #333;
+    color: #fff;
+    line-height: 80px;
+    font-size: 15px;
+}
+
+#footer .top{
+    border-bottom: 1px solid #666;
+}
+
+#footer .top dt, 
+#footer .top dd{
+    display: inline-block;
+}
+
+#footer .top dd~dd::before, 
+#footer .top dt::before{
+    content: "";
+    display: inline-block;
+    margin: 0 15px;
+    width: 1px;
+    height: 11px;
+    background: #ddd;
+}
+
+#footer .top i{
+    font-size: 25px;
+}
+
+#footer .container{
+    justify-content: space-between;
+}
+
+#footer .bottom address{
+    font-style: normal;
+}
+#footer .bottom select{
+    font-size: 12px;
+    text-transform: uppercase;
+    background: transparent;
+    color: #ddd;
+    padding: 5px 15px;
+    border: 1px solid #666;
+}
+
+#footer .bottom option{
+    color: #fff;
+    background: #333;
 }
